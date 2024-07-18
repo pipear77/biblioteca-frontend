@@ -1,0 +1,20 @@
+<h2>Lista Autores</h2>
+<table class="table table-striped">
+  <thead class="table-dark">
+      <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let autor of autores">
+          <td>{{autor.nombre}}</td>
+          <td>{{autor.apellido}}</td>
+          <td>
+            <button (click) = "updateAutor(autor.id)" class="btn btn-danger">Editar</button>
+            <button (click) = "deleteAutor(autor.id)" class="btn btn-info" style="margin-left : 10px">Eliminar</button>
+            <button (click) = "showAutor(autor.id)" class="btn btn-warning" style="margin-left : 10px">Ver detalles</button>
+          </td>
+      </tr>
+  </tbody>
+</table>

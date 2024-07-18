@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Crear Nuevo Libro</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" class="form-control" id="titulo" [(ngModel)]="libro.titulo" name="titulo" required>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <textarea class="form-control" id="descripcion" [(ngModel)]="libro.descripcion" name="descripcion" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="fechaPublicacion">Fecha de Publicación:</label>
+        <input type="date" class="form-control" id="fechaPublicacion" [(ngModel)]="libro.fechaPublicacion" name="fechaPublicacion" required>
+      </div>
+      <div class="form-group">
+        <label for="autor">Autor:</label>
+        <select class="form-control" id="autor" [(ngModel)]="libro.autor" name="autor" required>
+          <option *ngFor="let autor of autores" [ngValue]="autor">{{ autor.nombre }} {{ autor.apellido }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar</button>
+    </form>
+  </div>

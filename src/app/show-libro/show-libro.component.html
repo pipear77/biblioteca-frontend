@@ -1,0 +1,13 @@
+<div *ngIf="libro">
+    <h2>Detalles del Libro</h2>
+    <p><strong>ID:</strong> {{ libro.id }}</p>
+    <p><strong>Título:</strong> {{ libro.titulo }}</p>
+    <p><strong>Descripción:</strong> {{ libro.descripcion }}</p>
+    <p><strong>Fecha de publicación:</strong> {{ libro.fechaPublicacion }}</p>
+    <p><strong>Autor:</strong> {{ getAutorNombreCompleto(libro) }}</p>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+  
+  <button routerLink="/autores">Volver a la lista de Autores</button>

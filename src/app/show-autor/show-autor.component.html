@@ -1,0 +1,11 @@
+<div *ngIf="autor">
+    <h2>Detalles del Autor</h2>
+    <p><strong>ID:</strong> {{ autor.id }}</p>
+    <p><strong>Nombre:</strong> {{ autor.nombre }}</p>
+    <p><strong>Apellido:</strong> {{ autor.apellido }}</p>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+  </div>
+  
+  <button routerLink="/autores">Volver a la lista de Autores</button>
